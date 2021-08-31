@@ -1,0 +1,19 @@
+{
+  "name": "facial-rekonize-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node_modules/nodemon/bin/nodemon.js server.js"
+  },
+  "repository": "git@github.com:jerbeck/facial-rekonize-api.git",
+  "author": "jbeck <jeremy@jeremybeck.io>",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
