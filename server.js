@@ -28,6 +28,7 @@ app.get('/', (req, res) => res.send('success'));
 app.post('/signin', signin.handleSignIn(db, bcrypt));
 app.post('/register', register.handleRegister(db, bcrypt));
 app.get('/profile/:id', profile.handleProfile(db));
+app.post('/imageurl', (req, res) => { image.handleApiCall(req, res) });
 app.put('/image', image.handleImage(db));
 
 app.listen(3000, () => {

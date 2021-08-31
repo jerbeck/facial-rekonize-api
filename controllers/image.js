@@ -1,3 +1,18 @@
+const Clafifai = require('clarifai');
+
+const app = new Clarifai.App({
+  apiKey: process.env.clarifai_api_key
+})
+
+const handleApiCall = (req, res) => {
+	app.models
+		.predict('f76196b43bbd45c99b4f3cd8e8b40a8a', req.body.input)
+		.then(data => {
+			return res.json(data);
+		})
+		.catch(err => res.status(400).json("Error occured with API."))
+}
+
 const handleImage = (db) => (req, res) => {
 	const { id } = req.body;
 	db('users').where('id', '=', id)
@@ -8,5 +23,6 @@ const handleImage = (db) => (req, res) => {
 }
 
 module.exports = {
-	handleImage: handleImage
+	handleImage: handleImage,
+	handleApiCall: handleApiCall
 }
