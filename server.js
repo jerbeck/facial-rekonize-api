@@ -12,9 +12,9 @@ const db = knex({
 	client: 'pg',
 	connection: {
 		host: process.env.DATABSE_URL,
-		user: '',
-		password: '',
-		database:'facial-reko'
+		ssl: {
+			rejectUnauthorized: false
+		}
 	}
 });
 
