@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node_modules/nodemon/bin/nodemon.js server.js"
+    "start": "node server.js"
+    "start:dev": "node_modules/nodemon/bin/nodemon.js server.js"
   },
   "repository": "git@github.com:jerbeck/facial-rekonize-api.git",
   "author": "jbeck <jeremy@jeremybeck.io>",
