@@ -11,8 +11,8 @@ const image = require('./controllers/image');
 const db = knex({
 	client: 'pg',
 	connection: {
-		host: '127.0.0.1',
-		user: 'jbeck',
+		host: process.env.DATABSE_URL,
+		user: '',
 		password: '',
 		database:'facial-reko'
 	}
